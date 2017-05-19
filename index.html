@@ -121,11 +121,12 @@
                                 <label for="name">Name</label>
                                 <input class="pure-input-1" type="text" placeholder="Name*" id="name" name="name" required>
                                 <label for="email">Email Address</label>
-                                <input class="pure-input-1" id="email" type="email" placeholder="Email Address*" name="_replyto" required>
+                                <input class="pure-input-1" id="email" type="email" placeholder="Email Address*" name="email" required>
                                 <label for="phone">Phone Number</label>
                                 <input class="pure-input-1" type="tel" placeholder="Phone Number" id="phone">
                                 <label for="message">Message</label>
-                                <textarea class="pure-input-1" rows="5" placeholder="Message*" id="message" required></textarea>
+                                <textarea class="pure-input-1" rows="5" placeholder="Message*" id="message" name="message" required></textarea>
+                                <input type="hidden" name="_subject" value="New form submission from pngpaint.com" />
                                 <span class="pure-form-message">Fields marked with * are required.</span>
                                 <button type="submit" class="pure-button pure-button-primary">Send Message</button>
 

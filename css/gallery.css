@@ -137,7 +137,6 @@
     z-index: 700;
 }
 .viewbox .icon:hover, .viewbox .active {
-    background-color: rgba(14, 14, 15, 0.15);
     opacity: 1.0; 
 }
 .viewbox .panel {
@@ -190,10 +189,12 @@
 .viewbox .next {
     right: 10px;
     background-image: url(img/next.svg); 
+    background-color: rgba(0, 0, 0, 0.25);
 }
 .viewbox .prev { 
     left: 10px; 
     background-image: url(img/prev.svg);
+    background-color: rgba(0, 0, 0, 0.25);
 }
 /* CONTENT OF VIEWBOX */
 .viewbox .media_c {

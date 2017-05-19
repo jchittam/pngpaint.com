@@ -51,6 +51,20 @@ p.home {
     margin: 3em auto;
 }
 
+.contact-header {
+    background-color: rgb(31, 52, 70);
+    color: white;
+    text-align: center;
+    padding: 1.3em 0.3em;
+    font-size: 1.2em;
+    margin-top: -0.75em;
+    margin-bottom: 3em;
+}
+
+.contact-header a {
+    color: white;
+}
+
 .sidebar {
     background: linear-gradient(rgba(29, 67, 99, .75), rgba(29, 67, 99, .75)), url(../img/wall-min.jpg);
     color: #fff;
@@ -141,6 +155,53 @@ h2.brand-tagline {
     top: 0;
     width: 200px;
 }
+
+img.house1 {
+    margin-left: auto;
+}
+
+div.services-li {
+    margin: 0.15em;
+    padding-top: 100%;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover
+}
+
+div.services-li span {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    text-align: center;
+    padding: .25em;
+    color: #fff;
+}
+
+div.services-paint {
+    background-image: url("../img/int-ext-painting.jpg");
+    color: white;
+}
+
+div.services-pwash {
+    background-image: url("../img/pwash2.jpg");
+}
+
+div.services-carp {
+    background-image: url("../img/carp2.jpg");
+}
+
+div.services-drywall {
+    background-image: url("../img/drywall-repair.jpg");
+}
+
 @media (max-width: 560px) {
     .fancy span:before,
     .fancy span:after {
@@ -297,5 +358,17 @@ h2.brand-tagline {
     }
     h2.brand-tagline {
         padding-bottom: 10px;
+    }
+}
+
+@media (max-width: 1055px) {
+    .contact-header {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 879px) {
+    .contact-header {
+        display: none;
     }
 }

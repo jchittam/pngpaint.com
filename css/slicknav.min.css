@@ -33,14 +33,13 @@
     float: left;
     color: #fff;
     font-weight: 700;
-    text-shadow: 0 1px 3px #000
 }
 
 .slicknav_menu .slicknav_icon {
     float: left;
     width: 1.125em;
     height: .875em;
-    margin: .188em 0 0 .438em
+    margin: .04em 0 0 .438em
 }
 
 .slicknav_menu .slicknav_icon:before {

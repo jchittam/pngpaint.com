@@ -51,7 +51,7 @@
                 <nav class="nav hideonmobile">
                     <ul class="nav-list" id="menu">
                         <li class="nav-item">
-                            <a class="pure-button" href="#">Home</a>
+                            <a class="pure-button" href="#home">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="pure-button" href="#services">Services</a>
@@ -67,7 +67,7 @@
             </div>
         </div>
 
-        <div class="content pure-u-1 pure-u-md-3-4">
+        <div id="home" class="content pure-u-1 pure-u-md-3-4">
             <div>
                 <div class="pure-g contact-header">
                     <div class="pure-u-1-4"><span>Free Estimates!</span></div>
@@ -154,7 +154,7 @@
         $(function() {
             $('#menu').slicknav({
                 prependTo: '#mob-nav',
-                closeOnClick:true
+                closeOnClick: true
             });
         });
     </script>

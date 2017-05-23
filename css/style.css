@@ -109,9 +109,8 @@ h2.brand-tagline {
     margin-top: 1em;
     letter-spacing: 0.05em;
     text-transform: uppercase;
-    font-size: 90%;
+    font-size: 80%;
     width: 85%;
-    font-family: sans-serif;
 }
 
 .nav-item a:hover,
@@ -354,7 +353,6 @@ footer {
     .footer {
         text-align: center;
     }
-    
     .mobile-only {
         display: none;
     }

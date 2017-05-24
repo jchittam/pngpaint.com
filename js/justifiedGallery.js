@@ -1104,7 +1104,7 @@
         /* If defined, sizeRangeSuffixes is not used, and this function is used to determine the
            path relative to a specific thumbnail size. The function should accept respectively three arguments:
            current path, width and height */
-        rowHeight: '150',
+        rowHeight: '175',
         maxRowHeight: false, // false or negative value to deactivate. Positive number to express the value in pixels,
         // A string '[0-9]+%' to express in percentage (e.g. 300% means that the row height
         // can't exceed 3 * rowHeight)

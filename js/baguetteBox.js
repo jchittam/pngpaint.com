@@ -7,7 +7,7 @@
 
 /* global define, module */
 
-(function (root, factory) {
+(function(root, factory) {
     'use strict';
     if (typeof define === 'function' && define.amd) {
         define(factory);
@@ -16,23 +16,23 @@
     } else {
         root.baguetteBox = factory();
     }
-}(this, function () {
+}(this, function() {
     'use strict';
 
     // SVG shapes used on the buttons
     var leftArrow = '<svg width="44" height="60">' +
-            '<polyline points="30 10 10 30 30 50" stroke="rgba(255,255,255,0.5)" stroke-width="4"' +
-              'stroke-linecap="butt" fill="none" stroke-linejoin="round"/>' +
-            '</svg>',
+        '<polyline points="30 10 10 30 30 50" stroke="rgba(255,255,255,0.5)" stroke-width="4"' +
+        'stroke-linecap="butt" fill="none" stroke-linejoin="round"/>' +
+        '</svg>',
         rightArrow = '<svg width="44" height="60">' +
-            '<polyline points="14 10 34 30 14 50" stroke="rgba(255,255,255,0.5)" stroke-width="4"' +
-              'stroke-linecap="butt" fill="none" stroke-linejoin="round"/>' +
-            '</svg>',
+        '<polyline points="14 10 34 30 14 50" stroke="rgba(255,255,255,0.5)" stroke-width="4"' +
+        'stroke-linecap="butt" fill="none" stroke-linejoin="round"/>' +
+        '</svg>',
         closeX = '<svg width="30" height="30">' +
-            '<g stroke="rgb(160,160,160)" stroke-width="4">' +
-            '<line x1="5" y1="5" x2="25" y2="25"/>' +
-            '<line x1="5" y1="25" x2="25" y2="5"/>' +
-            '</g></svg>';
+        '<g stroke="rgb(160,160,160)" stroke-width="4">' +
+        '<line x1="5" y1="5" x2="25" y2="25"/>' +
+        '<line x1="5" y1="25" x2="25" y2="5"/>' +
+        '</g></svg>';
     // Global options and their defaults
     var options = {},
         defaults = {
@@ -40,7 +40,7 @@
             fullScreen: false,
             noScrollbars: false,
             titleTag: false,
-            buttons: 'auto',
+            buttons: true,
             async: false,
             preload: 2,
             animation: 'slideIn',
@@ -111,7 +111,7 @@
         } else if (touchEvent.pageX - touch.startX < -40) {
             touchFlag = true;
             showNextImage();
-        // Move 100 pixels up to close the overlay
+            // Move 100 pixels up to close the overlay
         } else if (touch.startY - touchEvent.pageY > 100) {
             hideOverlay();
         }
@@ -288,15 +288,15 @@
 
     function keyDownHandler(event) {
         switch (event.keyCode) {
-        case 37: // Left arrow
-            showPreviousImage();
-            break;
-        case 39: // Right arrow
-            showNextImage();
-            break;
-        case 27: // Esc
-            hideOverlay();
-            break;
+            case 37: // Left arrow
+                showPreviousImage();
+                break;
+            case 39: // Right arrow
+                showNextImage();
+                break;
+            case 27: // Esc
+                hideOverlay();
+                break;
         }
     }
 
@@ -494,8 +494,8 @@
         var imageElement = galleryItem.imageElement;
         var thumbnailElement = imageElement.getElementsByTagName('img')[0];
         var imageCaption = typeof options.captions === 'function' ?
-                            options.captions.call(currentGallery, imageElement) :
-                            imageElement.getAttribute('data-caption') || imageElement.title;
+            options.captions.call(currentGallery, imageElement) :
+            imageElement.getAttribute('data-caption') || imageElement.title;
         var imageSrc = getImageSrc(imageElement);
 
         // Prepare figure element
@@ -617,15 +617,15 @@
             setTimeout(function() {
                 /* jshint -W030 */
                 supports.transforms ?
-                    slider.style.transform = slider.style.webkitTransform = 'translate3d(' + offset + ',0,0)'
-                    : slider.style.left = offset;
+                    slider.style.transform = slider.style.webkitTransform = 'translate3d(' + offset + ',0,0)' :
+                    slider.style.left = offset;
                 slider.style.opacity = 1;
             }, 400);
         } else {
             /* jshint -W030 */
             supports.transforms ?
-                slider.style.transform = slider.style.webkitTransform = 'translate3d(' + offset + ',0,0)'
-                : slider.style.left = offset;
+                slider.style.transform = slider.style.webkitTransform = 'translate3d(' + offset + ',0,0)' :
+                slider.style.left = offset;
         }
     }
 

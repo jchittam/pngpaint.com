@@ -29,7 +29,7 @@
     <!--[if gt IE 8]><!-->
     <link rel="stylesheet" href="css/style.min.css">
     <!--<![endif]-->
-    <link rel="stylesheet" href="css/gallery.min.css">
+    <link href="css/flickrfeed.min.css" type="text/css" rel="stylesheet" />
     <noscript>
         <style>
             @media (max-width: 849px) {
@@ -77,11 +77,9 @@
                 </div>
                 <div class="posts">
                     <h1 class="fancy"><span>See Our Work</span></h1>
-                    <!-- gallery STRUCTURE -->
-                    <div class="niceGallery" id="gallery">
-                        <!-- HERE IS PLACE FOR PHOTOS -->
-                    </div>
-                    <!-- end gallery STRUCTURE -->
+                    <!-- GALLERY START -->
+                    <div data-toggle="jsfg" id="gallery" data-set-id="72157680886186144" data-per-page="20"></div>
+                    <!-- GALLERY END -->
                 </div>
             </div>
         </div>
@@ -99,34 +97,6 @@
     <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous" type="text/javascript"></script>
 
-    <script src="js/jquery-ui.min.js" type="text/javascript"></script>
-
-    <script src="js/FlickrAPI.min.js" type="text/javascript"></script>
-
-    <script src="js/Flickr.Gallery.min.js" type="text/javascript"></script>
-
-    <script>
-        $(document).ready(function() {
-            $("#gallery").flickrGallery({
-                // OPTIONS
-                //FLICKR API KEY
-                Key: '7d089638a6f2e3e813c6d4686037631c',
-                //Secret
-                Secret: '9db05dd657c68b47',
-                //FLICKR user ID
-                User: '150818056@N06',
-                //Flickr PhotoSet ID
-                PhotoSet: '72157680886186144',
-                /*-- VIEWBOX SETTINGS --*/
-                Speed: 400, //Speed of animations
-                navigation: 1, //(true) <a href="http://www.jqueryscript.net/tags.php?/Navigation/">Navigation</a> (arrows)
-                keyboard: 1, //(true) Keyboard navigation 
-                numberEl: 1 //(true) Number elements
-
-            });
-        });
-    </script>
-
     <script src="js/jquery.slicknav.min.js" type="text/javascript"></script>
 
     <script>
@@ -136,6 +106,13 @@
                 closeOnClick: true
             });
         });
+    </script>
+
+    <script src="js/flickrfeed.js"></script>
+    <script src="js/justifiedGallery.js"></script>
+    <script src="js/baguetteBox.js" async></script>
+    <script>
+        $("#gallery").jsFlickrGallery();
     </script>
 
     <script src="js/smooth-scroll.min.js" type="text/javascript"></script>

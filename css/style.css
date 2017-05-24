@@ -228,6 +228,7 @@ footer {
 @media (max-width: 360px) {
     .fancy span {
         text-decoration: underline;
+        line-height: 1.25;
     }
     .fancy span:before,
     .fancy span:after {
